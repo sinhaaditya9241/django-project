@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .logout-btn { 
+            background: red; 
+            color: white; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+        }
+        .user-info { 
+            background: #f0f0f0; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-radius: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Home Page</h1>
+        
+        <div class="user-info">
+            {% if user.is_authenticated %}
+                <p><strong>You are logged in as: {{ user.username }}</strong></p>
+                <p>User ID: {{ user.id }}</p>
+                <p>Email: {{ user.email }}</p>
+                <a href="/logout/" class="logout-btn">LOGOUT</a>
+            {% else %}
+                <p>You are not logged in.</p>
+                <a href="/login/">Go to Login</a>
+            {% endif %}
+        </div>
+        
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="/login/">Login</a></li>
+            <li><a href="/register/">Register</a></li>
+            <li><a href="/admin/">Admin</a></li>
+        </ul>
+    </div>
+</body>
+</html>

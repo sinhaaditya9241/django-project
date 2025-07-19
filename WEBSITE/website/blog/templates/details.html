@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>{{ detail.title }}</title>
+</head>
+<style>
+    body {
+        color: black;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<body>
+    <h1>{{ detail.title }}</h1>
+    <p><strong>Published on:</strong> {{ detail.public_date }}</p>
+    
+    <center>
+        <img src="{{ detail.image.url }}" height="300" width="400" alt="{{ detail.title }}">
+    </center>
+    
+    <br>
+    <div style="padding: 0 20px;">
+        <p>{{ detail.body }}</p> <!-- This line shows the blog content -->
+    </div>
+</body>
+</html>
