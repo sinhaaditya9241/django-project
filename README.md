@@ -1,8 +1,8 @@
-## Django Mini Project 🚀
+# Django Mini Project 🚀
 This is a demo mini-project built using the Django framework while learning the basics of web development with Django.
 It demonstrates fundamental concepts such as project setup, apps, models, views, templates, and CRUD operations.
 
-# ✨ Features
+## ✨ Features
 Django project and app structure setup
 
 Database integration using Django ORM
@@ -13,7 +13,7 @@ Basic CRUD (Create, Read, Update, Delete) functionality
 
 Simple and beginner-friendly codebase
 
-# ⚙️ Tech Stack
+## ⚙️ Tech Stack
 Python 🐍
 
 Django 🌐
